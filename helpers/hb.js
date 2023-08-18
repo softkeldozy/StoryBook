@@ -25,7 +25,7 @@ module.exports = {
         return `<a href="/stories/edit/${storyId}"><i class="fas fa-edit"></i></a>`
       }
     } else {
-      return ''
+      return '' 
     }
   },
   select: function (selected, options) {

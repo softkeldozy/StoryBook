@@ -63,7 +63,14 @@ require('./config/passport')(passport)
 connectDB();
 
 // handlebars extension
-app.engine('.hbs', exphbs.engine({defaultLayout: 'main', extname: '.hbs'}));
+app.engine('.hbs', exphbs.engine({helpers: {
+      formatDate,
+      stripTags,
+      truncate,
+      editIcon,
+      select,
+    },defaultLayout: 'main', 
+      extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
 // static folder path
